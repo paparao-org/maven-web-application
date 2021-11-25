@@ -98,14 +98,14 @@
 	
 	    <repository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Releases Nexus Repository</name>
-	      <url>http://13.235.75.214:9980/mithuntechnologies/repository/wallmart-release/</url>
+	      <name>paparaoorg Releases Nexus Repository</name>
+	      <url>http://13.233.255.48:7777/paparaoorg/repository/classes-release/</url>
 	    </repository>
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
-	      <name>Mithun Technologies Snapshot Nexus Repository </name>
-	      <url>http://13.235.75.214:9980/mithuntechnologies/repository/wallmart-snapshot/</url>
+	      <name>paparaoorg Snapshot Nexus Repository </name>
+	      <url>http://13.233.255.48:7777/paparaoorg/repository/classes-snapshot/</url>
 	    </snapshotRepository>
 	    
 	</distributionManagement>
