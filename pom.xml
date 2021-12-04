@@ -102,7 +102,7 @@
 	      <url>http://65.0.155.69:7777/paparaoorg/repository/wallmart-release/</url>
 	    </repository> -->
 	    
-	    <snapshotRepository>
+	    <repository>
 	      <id>nexus</id>
 	      <name>paparaoorg Snapshot Nexus Repository </name>
 	      <url>http://65.0.155.69:7777/paparaoorg/repository/wallmart-snapshot/</url>
