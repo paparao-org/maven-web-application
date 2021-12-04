@@ -95,13 +95,12 @@
 	</dependencies>
 	
 	<distributionManagement>
-	
-	    <repository>
+	      <!--
+              <repository>
 	      <id>nexus</id>
 	      <name>paparaoorg Releases Nexus Repository</name>
 	      <url>http://65.0.155.69:7777/paparaoorg/repository/wallmart-release/</url>
-	    </repository>
-		<!-- provided repository -->
+	    </repository> -->
 	    
 	    <snapshotRepository>
 	      <id>nexus</id>
