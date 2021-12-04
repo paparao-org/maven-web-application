@@ -96,6 +96,7 @@
 	
 	<distributionManagement>
 	
+	<!-- provided repository -->
 	    <repository>
 	      <id>nexus</id>
 	      <name>paparaoorg Releases Nexus Repository</name>
