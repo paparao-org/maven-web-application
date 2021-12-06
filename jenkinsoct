@@ -1,1 +1,44 @@
+node('node-wallmart'){
 
+echo "Dev Job"
+
+def mavenHome = tool name: "maven3.8.4"
+
+properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '5', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'RebuildSettings', autoRebuild: false, rebuildDisabled: false], [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * *  *  *')])])
+
+stage('CheckoutCode'){
+
+git branch: 'development', credentialsId: 'b6604fdf-4c56-4223-be92-262a0623dc7a', url: 'https://github.com/paparao-org/maven-web-application.git'
+}
+
+stage('Build'){
+sh "${mavenHome}/bin/mvn clean package"
+}
+
+/*
+stage('ExecuteSonarQubeReport'){
+sh "${mavenHome}/bin/mvn sonar:sonar"
+}
+
+stage('UploadArtifactsIntoNexus'){
+sh "${mavenHome}/bin/mvn deploy"
+}
+
+stage('DeployAppintoTomcatServer'){
+
+sshagent(['49569aa5-727d-4803-84ca-24b9d1fcfeaa']) {
+   sh "scp -o StrictHostKeyChecking=no target/maven-web-application.war ec2-user@15.206.65.106:/opt/apache-tomcat-9.0.54/webapps/"
+}
+}
+
+stage('SendEmailNotification'){
+
+emailext body: '''Build Over..
+
+Regards,
+Mithun Technologies,
+9980923226''', subject: 'Build Over', to: 'devoptrainingblr@gmail.com'
+}
+*/
+
+}
